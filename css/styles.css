@@ -128,18 +128,21 @@ img {
   letter-spacing: 0.02em;
 }
 
-.contacts-list-link:hover {
+.contacts-list-link:hover,
+.contacts-list-link:focus {
   color: var(--accent-color);
 }
 
 .hero {
   background-color: var(--background-color);
-  width: 1600px;
-  height: 600px;
 }
 
 .hero .conteiner {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
 }
 
 .hero-title {
@@ -150,6 +153,7 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .button {
@@ -171,12 +175,25 @@ img {
   color: var(--title-text-color);
 }
 
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 87px;
+}
 .advantages-list-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.advantages-item {
+  width: 270px;
+}
+.advantages-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .advantages-list-item {
@@ -193,14 +210,44 @@ img {
   line-height: 1.167;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  padding-top: 94px;
 }
 
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 102px;
+}
+
+.works-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+.team-list-item {
+  width: 270px;
+  height: 368px;
+  background: var(--light-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .team-list-job {
@@ -209,6 +256,7 @@ img {
   line-height: 1.187;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-bottom: 30px;
 }
 
 .team-section {
@@ -222,18 +270,64 @@ img {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
+  height: 38px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-.portfolio-selection-btn:hover {
+.portfolio-selection-btn:hover,
+.portfolio-selection-btn:focus {
   color: var(--light-color);
   background-color: var(--accent-color);
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
+.portfolio-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 94px;
+}
+
+.portfolio-item {
+  width: 370px;
+  height: 404px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.portfolio-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.portfolio-item-box {
+  margin: 20px 24px;
+}
 .portfolio-item-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .portfolio-item-desc {
@@ -246,12 +340,19 @@ img {
 
 .footer {
   background-color: var(--background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
+.footer .logo {
+  margin-bottom: 20px;
+}
 .logo-var {
   color: var(--light-color);
 }
 
+.footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer-list-link {
   color: var(--light-color);
   font-weight: normal;
